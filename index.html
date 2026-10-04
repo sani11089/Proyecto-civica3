@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actuemos para prevenir los desastres</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: #eeeeee;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #000000, #8b0000, #d00000);
+            text-align: center;
+            padding: 70px 20px;
+            border-bottom: 5px solid #ff1a1a;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+            color: white;
+            text-shadow: 3px 3px 8px #000;
+        }
+
+        header p {
+            font-size: 19px;
+            color: #ffdddd;
+        }
+
+        /* MENÚ */
+        nav {
+            background: #050505;
+            padding: 18px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #b00000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 6px 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff1a1a;
+        }
+
+        /* SECCIONES */
+        section {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 35px;
+            background: #151515;
+            border-radius: 15px;
+            border: 1px solid #450000;
+            box-shadow: 0 0 20px rgba(180, 0, 0, 0.25);
+        }
+
+        h2 {
+            color: #ff2020;
+            border-bottom: 3px solid #a00000;
+            padding-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+        }
+
+        h3 {
+            color: #ff4b4b;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        /* TARJETAS */
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: #0d0d0d;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #700000;
+            border-left: 5px solid #e00000;
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            border-color: #ff2020;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.35);
+        }
+
+        /* LISTAS */
+        ul {
+            line-height: 2;
+        }
+
+        li::marker {
+            color: #ff2020;
+        }
+
+        /* CUADRO IMPORTANTE */
+        .importante {
+            background: #260000;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff0000;
+            color: #ffdada;
+        }
+
+        /* REFLEXIONES */
+        .reflexion {
+            background: #101010;
+            padding: 22px;
+            margin: 18px 0;
+            border-radius: 12px;
+            border-left: 5px solid #c00000;
+        }
+
+        .reflexion h3 {
+            margin-top: 0;
+        }
+
+        /* BOTÓN */
+        .boton {
+            display: inline-block;
+            background: #c00000;
+            color: white;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #ff0000;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        /* DESTACADO */
+        .rojo {
+            color: #ff2020;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #030303;
+            color: #bbbbbb;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 3px solid #a00000;
+        }
+
+        footer strong {
+            color: #ff2020;
+        }
+
+        /* ANIMACIÓN */
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: aparecer 0.7s ease;
+        }
+
+        /* CELULARES */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+                font-size: 14px;
+            }
+
+            section {
+                margin: 20px 12px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌧️ Actuemos para prevenir los desastres</h1>
+    <p>Una comunidad preparada es una comunidad más segura.</p>
+</header>
+
+<nav>
+    <a href="#riesgo">Riesgo</a>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#actividades">Actividades</a>
+    <a href="#participantes">Participantes</a>
+    <a href="#mecanismo">Incidencia</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#reflexion">Reflexiones</a>
+</nav>
+
+<section id="riesgo">
+    <h2>🌧️ 1. Descripción del riesgo identificado</h2>
+
+    <p>
+        El riesgo identificado son las <span class="rojo">inundaciones</span>.
+        Estas pueden ocurrir cuando las lluvias son muy intensas y el agua
+        se acumula en calles, casas, ríos o lugares donde los sistemas de
+        drenaje no tienen suficiente capacidad.
+    </p>
+
+    <p>
+        Las inundaciones pueden provocar daños en viviendas, carreteras,
+        centros educativos y otros espacios de la comunidad. También pueden
+        poner en peligro a las personas y animales.
+    </p>
+
+    <div class="importante">
+        ⚠️ <strong>IMPORTANTE:</strong> Una inundación puede convertirse
+        rápidamente en una emergencia. La prevención ayuda a reducir sus
+        consecuencias.
+    </div>
+</section>
+
+<section id="objetivo">
+    <h2>🎯 2. Objetivo de la propuesta</h2>
+
+    <p>
+        El objetivo es <span class="rojo">informar y preparar a la comunidad</span>
+        para prevenir y actuar correctamente ante una inundación,
+        promoviendo acciones que reduzcan los riesgos y protejan la vida
+        de las personas.
+    </p>
+</section>
+
+<section id="actividades">
+    <h2>🛠️ 3. Actividades preventivas</h2>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <h3>🧹 Limpiar desagües</h3>
+            <p>
+                Mantener libres de basura las alcantarillas y canales para
+                facilitar el paso del agua.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>📢 Informar</h3>
+            <p>
+                Crear carteles, publicaciones y mensajes educativos sobre
+                qué hacer antes, durante y después de una inundación.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🎒 Preparar un kit</h3>
+            <p>
+                Tener agua, alimentos, linterna, medicamentos necesarios,
+                documentos importantes y otros artículos básicos.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>🚨 Plan de emergencia</h3>
+            <p>
+                Identificar lugares seguros y establecer rutas de evacuación
+                para la comunidad.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="participantes">
+    <h2>👥 4. Personas e instituciones que participarían</h2>
+
+    <ul>
+        <li>Estudiantes y docentes.</li>
+        <li>Familias de la comunidad.</li>
+        <li>Municipalidad.</li>
+        <li>CNE.</li>
+        <li>Cruz Roja Costarricense.</li>
+        <li>Bomberos de Costa Rica.</li>
+        <li>Vecinos de la comunidad.</li>
+    </ul>
+</section>
+
+<section id="mecanismo">
+    <h2>📢 5. Mecanismo de incidencia ciudadana</h2>
+
+    <p>
+        El mecanismo seleccionado es una
+        <span class="rojo">campaña digital de prevención</span>.
+    </p>
+
+    <p>
+        Se utilizarían redes sociales, carteles digitales y este sitio web
+        para compartir información sobre las inundaciones y enseñar a la
+        comunidad cómo prepararse.
+    </p>
+
+    <a class="boton" href="#actividades">Ver actividades 🔥</a>
+</section>
+
+<section id="beneficios">
+    <h2>🌱 6. Beneficios esperados</h2>
+
+    <ul>
+        <li>Mayor conocimiento sobre los riesgos de las inundaciones.</li>
+        <li>Personas mejor preparadas para una emergencia.</li>
+        <li>Reducción de basura en alcantarillas y desagües.</li>
+        <li>Mejor organización de la comunidad.</li>
+        <li>Protección de vidas y bienes materiales.</li>
+        <li>Mayor participación ciudadana en la prevención.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>💭 7. Reflexión final</h2>
+
+    <p>
+        Prevenir los desastres es responsabilidad de todas las personas.
+        Aunque no siempre podemos evitar que ocurra un fenómeno natural,
+        sí podemos prepararnos para disminuir sus consecuencias.
+    </p>
+
+    <p>
+        Una comunidad informada, organizada y solidaria puede responder
+        mejor ante una emergencia. Por eso es importante participar,
+        informarse y ayudar a otras personas.
+    </p>
+</section>
+
+<section id="reflexion">
+    <h2>🧠 8. Reflexión individual</h2>
+
+    <div class="reflexion">
+        <h3>¿Qué aprendí sobre la prevención de los desastres?</h3>
+        <p>
+            Aprendí que la prevención permite reducir los daños causados
+            por los desastres y que estar informado y preparado puede
+            ayudar a proteger muchas vidas.
+        </p>
+    </div>
+
+    <div class="reflexion">
+        <h3>¿Qué puedo hacer para protegerme y proteger a otras personas?</h3>
+        <p>
+            Puedo mantenerme informado, seguir las indicaciones de las
+            autoridades, conocer las rutas de evacuación, preparar un kit
+            de emergencia y ayudar a las personas que lo necesiten.
+        </p>
+    </div>
+
+    <div class="reflexion">
+        <h3>¿Cómo puedo colaborar para que mi comunidad esté mejor preparada?</h3>
+        <p>
+            Puedo compartir información sobre prevención, participar en
+            actividades comunitarias, evitar tirar basura en las calles
+            y colaborar con mi familia, compañeros y vecinos para crear
+            planes de emergencia.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>🌎 <strong>La prevención comienza con nuestras acciones.</strong></p>
+    <p>Proyecto de Cívica | Tercera entrega</p>
+</footer>
+
+</body>
+</html>
